@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatPage"
+    android:background="#E2F3F5">
+
+    <ListView
+        android:id="@+id/lvMessage"
+        android:layout_width="375dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:divider="@null"
+        android:dividerHeight="-15dp"
+        android:paddingStart="5dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="20dp"
+        android:scrollbars="vertical"
+        android:textFilterEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/etMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#BFB8B8"
+        android:hint="Enter a message"
+        android:padding="15dp"
+        android:textColor="@color/letterColor"
+        android:textColorHint="#F728325A"
+        app:layout_constraintHorizontal_weight="0.80"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSend"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnSend"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="@drawable/sendbox"
+        android:onClick="onSend"
+        app:layout_constraintHorizontal_weight="0.20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
